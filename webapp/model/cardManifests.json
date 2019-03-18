@@ -1,0 +1,350 @@
+{
+	"stockOut": {
+		"sap.card": {
+			"type": "Analytical",
+			"header": {
+				"type": "Numeric",
+				"data": {
+					"json": {
+						"number": "728",
+						"unit": "笔",
+						"trend": "Up",
+						"state": "Error",
+						"target": {
+							"number": 650,
+							"unit": "条"
+						},
+						"deviation": {
+							"number": 20.7
+						},
+						"details": "21, 2019-02"
+					}
+				},
+				"title": "出库情况",
+				"subTitle": "",
+				"unitOfMeasurement": "",
+				"mainIndicator": {
+					"number": "{number}",
+					"unit": "{unit}",
+					"trend": "{trend}",
+					"state": "{state}",
+					"range": {
+						"WE CAN OFFER THE USE OF RANGE OR STATE": "WE CAN OFFER THE USE OF RANGE OR STATE",
+						"Critical": [
+							0,
+							100
+						],
+						"Good": [
+							100,
+							1000
+						]
+					}
+				},
+				"details": "{details}",
+				"sideIndicators": [{
+					"title": "平均条目",
+					"number": "{target/number}",
+					"unit": "{target/unit}"
+				}, {
+					"title": "偏离率",
+					"number": "{deviation/number}",
+					"unit": "%"
+				}]
+			},
+			"content": {
+				"chartType": "Line",
+				"legend": {
+					"visible": true,
+					"position": "Bottom",
+					"alignment": "Left"
+				},
+				"plotArea": {
+					"dataLabel": {
+						"visible": true
+					},
+					"categoryAxisText": {
+						"visible": false
+					},
+					"valueAxisText": {
+						"visible": false
+					}
+				},
+				"title": {
+					"text": "出库",
+					"visible": true,
+					"alignment": "Left"
+				},
+				"measureAxis": "valueAxis",
+				"dimensionAxis": "categoryAxis",
+				"data": {
+					"json": {
+						"list": [{
+							"Week": "CW1",
+							"Revenue": 431
+
+						}, {
+							"Week": "CW02",
+							"Revenue": 494
+						}, {
+							"Week": "CW03",
+							"Revenue": 491
+
+						}, {
+							"Week": "CW04",
+							"Revenue": 536
+
+						}, {
+							"Week": "CW05",
+							"Revenue": 675.00
+
+						}, {
+							"Week": "CW06",
+							"Revenue": 680.00
+
+						}]
+					},
+					"path": "/list"
+				},
+				"dimensions": [{
+					"label": "Weeks",
+					"value": "{Week}"
+				}],
+				"measures": [{
+					"label": "Revenue",
+					"value": "{Revenue}"
+				}]
+			}
+		}
+	},
+	"stockIn": {
+		"sap.card": {
+			"type": "Analytical",
+			"header": {
+				"type": "Numeric",
+				"data": {
+					"json": {
+						"n": "324",
+						"u": "%",
+						"trend": "Up",
+						"valueColor": "Good"
+					}
+				},
+				"title": "入库情况",
+				"mainIndicator": {
+					"number": "{n}",
+					"unit": "{u}",
+					"trend": "{trend}",
+					"state": "{valueColor}"
+				},
+				"details": "21,2019-02",
+				"sideIndicators": [{
+					"title": "目标",
+					"number": "325",
+					"unit": "个"
+				}, {
+					"title": "偏离度",
+					"number": "22.43",
+					"unit": "%"
+				}]
+			},
+			"content": {
+				"chartType": "Column",
+				"legend": {
+					"visible": true,
+					"position": "Bottom",
+					"alignment": "Left"
+				},
+				"plotArea": {
+					"dataLabel": {
+						"visible": true,
+						"showTotal": true
+					},
+					"categoryAxisText": {
+						"visible": false
+					},
+					"valueAxisT1ext": {
+						"visible": false
+					},
+					"dataPointStyle": {
+						"rules": [{
+							"dataContext": {
+								"Revenue": "*"
+							},
+							"properties": {
+								"color": "sapUiChartPaletteSemanticBad"
+							},
+							"displayName": "Revenue < 600"
+						}],
+						"others": {
+							"properties": {
+								"color": "sapUiChartPaletteSemanticGood"
+							},
+							"displayName": "Revenue > 450"
+						}
+					}
+				},
+				"valueAxis": {
+					"label": {
+						"formatString": "formatPattern.SHORTFLOAT"
+					},
+					"color": "sapUiChartPaletteSemanticBad",
+
+					"title": {
+						"visible": false
+					}
+				},
+
+				"categoryAxis": {
+					"title": {
+						"visible": false
+					}
+				},
+
+				"title": {
+					"text": "收货",
+					"visible": true,
+					"alignment": "Left"
+				},
+				"measureAxis": "valueAxis",
+				"dimensionAxis": "categoryAxis",
+				"data": {
+					"json": {
+						"list": [
+
+							{
+								"Seasons": "周一",
+								"Revenue": 325
+
+							}, {
+								"Seasons": "周二",
+								"Revenue": 464
+
+							}, {
+								"Seasons": "周三",
+								"Revenue": 479
+
+							}, {
+								"Seasons": "周四",
+								"Revenue": 450
+
+							}, {
+								"Seasons": "周五",
+								"Revenue": 360
+
+							}, {
+								"Seasons": "周六",
+								"Revenue": 536
+
+							}
+						]
+					},
+					"path": "/list"
+				},
+				"series": {
+					"name": "Series",
+					"defaultSelected": 0,
+					"values": [{
+						"name": "1 Series",
+						"value": ["Revenue"]
+					}]
+				},
+				"dataLabel": {
+					"name": "Value Label",
+					"defaultState": true
+				},
+				"axisTitle": {
+					"name": "Axis Title",
+					"defaultState": false
+				},
+				"dimensions": [{
+					"name": "Seasons",
+					"value": "{Seasons}"
+				}],
+
+				"measures": [{
+					"label": "收货",
+					"value": "{Revenue}"
+				}]
+			}
+		}
+	},
+	"errorInf": {
+		"sap.card": {
+			"type": "List",
+			"header": {
+				"type": "Numeric",
+				"data": {
+					"json": {
+						"n": "157",
+						"u": "笔",
+						"trend": "Up",
+						"valueColor": "Error"
+					}
+				},
+				"title": "差错信息",
+				"mainIndicator": {
+					"number": "{n}",
+					"unit": "{u}",
+					"trend": "{trend}",
+					"state": "{valueColor}"
+				},
+				"details": "21,2019-02",
+				"sideIndicators": [{
+					"title": "目标",
+					"number": "325",
+					"unit": "个"
+				}, {
+					"title": "偏离度",
+					"number": "22.43",
+					"unit": "%"
+				}]
+			},
+			"content": {
+              
+				"data": {
+					"json": {
+						"list": [
+
+							{
+								"title": "入库异常",
+								"Highlight": "Error",
+								"value": 32,
+								"state": "Error"
+
+							}, {
+								"title": "库存异常",
+								"Highlight": "Warning",
+								"value": 46,
+								"state": "Warning"
+
+							}, {
+								"title": "出库异常",
+								"Highlight": "Success",
+								"value": 79,
+								"state": "Success"
+
+							}
+						]
+					},
+					"path": "/list"
+				},
+				"item": {
+					"title": {
+						"value": "{title}"
+					},
+
+				"info" :{
+						"value" :"{value}",
+						"state":"{state}"
+					},
+		
+						
+
+					"highlight" : "{Highlight}"	
+
+				}
+
+			}
+		}
+	}
+}

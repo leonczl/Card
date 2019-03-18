@@ -1,0 +1,106 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:x="sap.uxap" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:sf="sap.ui.layout.form" xmlns:f="sap.f" xmlns:layout="sap.ui.layout" xmlns:chart="sap.suite.ui.microchart"
+	xmlns:w="sap.ui.integration.widgets" controllerName="Card.controller.DashBoard" height="100%" displayBlock="false">
+	<App>
+		<f:DynamicPage id="dynamicPageId" headerExpanded="false" toggleHeaderOnTitleClick="true">
+			<f:title>
+				<f:DynamicPageTitle primaryArea="Middle">
+					<f:heading>
+						<Image src="{i18n>logo}" densityAware="true"/>
+						<Title text="{i18n>title}"/>
+					</f:heading>
+				</f:DynamicPageTitle>
+			</f:title>
+			<f:header>
+				<f:DynamicPageHeader pinnable="true">
+					<f:content>
+						<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+							<items>
+								<Panel backgroundDesign="Transparent" class="sapUiNoContentPadding sapUiSmallMarginTop">
+									<content>
+										<layout:HorizontalLayout allowWrapping="false">
+											<Image src="{i18n>loginimg}" densityAware="true"/>
+											<layout:VerticalLayout class="sapUiSmallMargin">
+												<ObjectAttribute title="员工号" text="{i18n>userID}"/>
+												<ObjectAttribute title="用户名 " text="{i18n>userName}"/>
+												<ObjectAttribute title="部 门" text="{i18n>departName}"/>
+												<ObjectStatus text="{i18n>state}" state="Success"/>
+											</layout:VerticalLayout>
+										</layout:HorizontalLayout>
+									</content>
+								</Panel>
+							</items>
+						</FlexBox>
+					</f:content>
+				</f:DynamicPageHeader>
+			</f:header>
+			<f:content>
+				<x:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
+					<x:sections>
+						<x:ObjectPageSection title="{i18n>groupName01}">
+							<x:subSections>
+								<x:ObjectPageSubSection title=" ">
+									<x:blocks>
+										<f:CardContainer>
+											<w:Card height="23rem" manifest="{manifests>/stockIn}">
+												<w:layoutData>
+													<f:CardItemLayoutData columns="3"/>
+												</w:layoutData>
+											</w:Card>
+											<w:Card height="23rem" manifest="{manifests>/stockOut}">
+												<w:layoutData>
+													<f:CardItemLayoutData columns="3"/>
+												</w:layoutData>
+											</w:Card>
+											<w:Card height="23rem" manifest="{manifests>/errorInf}">
+												<w:layoutData>
+													<f:CardItemLayoutData columns="3"/>
+
+												</w:layoutData>
+											</w:Card>
+										</f:CardContainer>
+									</x:blocks>
+								</x:ObjectPageSubSection>
+							</x:subSections>
+						</x:ObjectPageSection>
+						<x:ObjectPageSection title="{i18n>groupName02}">
+							<x:subSections>
+								<x:ObjectPageSubSection title=" ">
+									<x:blocks>
+										<Title text="Section 2"/>
+										<chart:ColumnMicroChart size="M" press="press" class="sapUiSmallMargin">
+											<chart:columns>
+												<chart:ColumnMicroChartData value="60" color="Error"/>
+												<chart:ColumnMicroChartData value="80" color="Error"/>
+												<chart:ColumnMicroChartData value="100" color="Error"/>
+												<chart:ColumnMicroChartData value="60" color="Neutral"/>
+												<chart:ColumnMicroChartData value="55" color="Neutral"/>
+												<chart:ColumnMicroChartData value="15" color="Neutral"/>
+											</chart:columns>
+										</chart:ColumnMicroChart>
+									</x:blocks>
+								</x:ObjectPageSubSection>
+							</x:subSections>
+						</x:ObjectPageSection>
+						<x:ObjectPageSection title="{i18n>groupName03}">
+							<x:subSections>
+								<x:ObjectPageSubSection title=" ">
+									<x:blocks>
+										<Title text="Section 3"/>
+										<chart:ComparisonMicroChart size="S" scale="M" class="sapUiSmallMargin" press="press">
+											<chart:data>
+												<chart:ComparisonMicroChartData title="EMEA" displayValue="USD 0" color="Good"/>
+												<chart:ComparisonMicroChartData title="EMEA" value="50" color="Good"/>
+												<chart:ComparisonMicroChartData title="APAC" value="-20" color="Error"/>
+											</chart:data>
+										</chart:ComparisonMicroChart>
+									</x:blocks>
+								</x:ObjectPageSubSection>
+							</x:subSections>
+						</x:ObjectPageSection>
+					</x:sections>
+				</x:ObjectPageLayout>
+			</f:content>
+		</f:DynamicPage>
+	</App>
+</mvc:View>
