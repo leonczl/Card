@@ -74,7 +74,7 @@
 										<!--<Title text="Section 2"/>-->
 										<layout:HorizontalLayout class="sapUiContentPadding">
 												<GenericTile press="press" header="周转情况 " subheader="" frameType="TwoByOne">
-													<TileContent footer="">
+													<TileContent footer="月份:2019-03">
 														<NumericContent scale="天" value="123" valueColor="Error" indicator="Up"/>
 													</TileContent>
 													<tileContent>
@@ -86,8 +86,8 @@
 													</tileContent>
 												</GenericTile>
 												<GenericTile press="press" header="效期情况" subheader="" frameType="TwoByOne">
-													<TileContent footer="">
-														<NumericContent scale="天" value="35" valueColor="Error" indicator="Up"/>
+													<TileContent footer="月份:2019-03">
+														<NumericContent scale="天" value="{manifests>/rotation/data/json/day}" valueColor="Error" indicator="Up"/>
 													</TileContent>
 													<tileContent>
 														<TileContent footer="近效期 ">

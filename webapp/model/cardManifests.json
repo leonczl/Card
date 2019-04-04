@@ -354,13 +354,13 @@
 				"type": "Numeric",
 				"data": {
 					"json": {
-						"number": "728",
-						"unit": "笔",
+						"number": "1056",
+						"unit": "万元",
 						"trend": "Up",
 						"state": "Error",
 						"target": {
-							"number": 650,
-							"unit": "条"
+							"number": 950,
+							"unit": "万元"
 						},
 						"deviation": {
 							"number": 20.7
@@ -418,7 +418,7 @@
 					}
 				},
 				"title": {
-					"text": "出库",
+					"text": "存货结构",
 					"visible": true,
 					"alignment": "Left"
 				},
@@ -464,5 +464,18 @@
 			}
 		}
 	},
-	"expiry":{}
+	"rotation":{
+		"header":{
+			"data":{
+				"json":{
+				  "day" :150,
+				  "months":"2019-03"
+				}
+			}
+		},
+		"content":{
+			
+		}
+	}
+
 }
