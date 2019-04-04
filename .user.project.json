@@ -16,7 +16,11 @@
         "runnerId": "webapprunner",
         "id": 2146925,
         "displayName": "Run index.html",
+<<<<<<< HEAD
         "lastRunTimeStamp": 1554363337587
+=======
+        "lastRunTimeStamp": 1552897292235
+>>>>>>> 26da0e9efdf8a168ce3c400b6d6c764061dca4b7
       }
     }
   ]

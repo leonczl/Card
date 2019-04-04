@@ -52,6 +52,7 @@
 													<f:CardItemLayoutData columns="3"/>
 												</w:layoutData>
 											</w:Card>
+<<<<<<< HEAD
 											<w:Card height="23rem" manifest="{manifests>/Inf}">
 												<w:layoutData>
 													<f:CardItemLayoutData columns="3"/>
@@ -117,6 +118,50 @@
 								<x:ObjectPageSubSection title=" ">
 									<x:blocks>
 										<Title text="Section 3"/>
+=======
+											<w:Card height="23rem" manifest="{manifests>/errorInf}">
+												<w:layoutData>
+													<f:CardItemLayoutData columns="3"/>
+
+												</w:layoutData>
+											</w:Card>
+										</f:CardContainer>
+									</x:blocks>
+								</x:ObjectPageSubSection>
+							</x:subSections>
+						</x:ObjectPageSection>
+						<x:ObjectPageSection title="{i18n>groupName02}">
+							<x:subSections>
+								<x:ObjectPageSubSection title=" ">
+									<x:blocks>
+										<Title text="Section 2"/>
+										<chart:ColumnMicroChart size="M" press="press" class="sapUiSmallMargin">
+											<chart:columns>
+												<chart:ColumnMicroChartData value="60" color="Error"/>
+												<chart:ColumnMicroChartData value="80" color="Error"/>
+												<chart:ColumnMicroChartData value="100" color="Error"/>
+												<chart:ColumnMicroChartData value="60" color="Neutral"/>
+												<chart:ColumnMicroChartData value="55" color="Neutral"/>
+												<chart:ColumnMicroChartData value="15" color="Neutral"/>
+											</chart:columns>
+										</chart:ColumnMicroChart>
+									</x:blocks>
+								</x:ObjectPageSubSection>
+							</x:subSections>
+						</x:ObjectPageSection>
+						<x:ObjectPageSection title="{i18n>groupName03}">
+							<x:subSections>
+								<x:ObjectPageSubSection title=" ">
+									<x:blocks>
+										<Title text="Section 3"/>
+										<chart:ComparisonMicroChart size="S" scale="M" class="sapUiSmallMargin" press="press">
+											<chart:data>
+												<chart:ComparisonMicroChartData title="EMEA" displayValue="USD 0" color="Good"/>
+												<chart:ComparisonMicroChartData title="EMEA" value="50" color="Good"/>
+												<chart:ComparisonMicroChartData title="APAC" value="-20" color="Error"/>
+											</chart:data>
+										</chart:ComparisonMicroChart>
+>>>>>>> 26da0e9efdf8a168ce3c400b6d6c764061dca4b7
 									</x:blocks>
 								</x:ObjectPageSubSection>
 							</x:subSections>
